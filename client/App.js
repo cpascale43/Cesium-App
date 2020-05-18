@@ -5,6 +5,7 @@ import axios from "axios";
 import MaterialTable from "./components/MaterialTable";
 import AddMaterialForm from "./components/AddMaterialForm";
 import EditMaterialForm from "./components/EditMaterialForm";
+import { numToDollar } from "../utils";
 
 const App = () => {
   const [materials, setMaterials] = useState([]);
@@ -24,10 +25,6 @@ const App = () => {
     const { data } = await axios.get("http://localhost:3000/api");
     setMaterials(data);
   }
-
-  useEffect(() => {
-    handleMaterials();
-  }, []);
 
   // CRUD Operations
 
@@ -61,6 +58,18 @@ const App = () => {
     setEditing(false);
   };
 
+  const handleCost = () => {
+    let cost = 0;
+    materials.map((material) => {
+      cost += material.costPerPound * material.density;
+    });
+    setTotalCost(numToDollar(cost));
+  };
+
+  useEffect(() => {
+    handleMaterials();
+  }, []);
+
   return (
     <div className="app">
       <h1>Construction Materials Tracker</h1>
@@ -89,6 +98,10 @@ const App = () => {
             editRow={editRow}
             deleteMaterial={deleteMaterial}
           />
+          <div className="flex-small">
+            <button onClick={handleCost}>Get total</button>
+            <h4>{totalCost}</h4>
+          </div>
         </div>
       </div>
     </div>

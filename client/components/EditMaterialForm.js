@@ -10,8 +10,8 @@ const EditMaterialForm = (props) => {
   };
 
   useEffect(() => {
-    setMaterial(props.currentMaterial)
-  }, [props])
+    setMaterial(props.currentMaterial);
+  }, [props]);
 
   return (
     <form
