@@ -20,7 +20,7 @@ const setMaterials = materials => ({type: SET_MATERIALS, materials})
 export const fetchMaterials = () => {
   return async dispatch => {
     try {
-      const { data } = await axios.get(URL HERE);
+      const { data } = await axios.get(URL_HERE);
       dispatch(setMaterials(data));
     } catch (error) {
       console.error(error);
