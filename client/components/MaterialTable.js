@@ -38,7 +38,7 @@ const MaterialTable = (props) => (
         ))
       ) : (
         <tr>
-          <td colSpan={3}>No materials</td>
+          <td colSpan={4}>No materials</td>
         </tr>
       )}
     </tbody>
