@@ -16,19 +16,19 @@ Optional Testing:
 ## Technology Choices
 
 ### React, React-Redux & Redux Thunk
-I used React for the frontend. Since this was completed in three hours and intended to be a boilerplate app, I managed state using State Hooks. I added Redux as a dependency for later use.
+I used React for the application code. Since this was completed in three hours and intended to serve as a skeleton application, I managed state using State Hooks. I included Redux as a dependency for later use.
 
 ### CSS
-I used Primitive - a small CSS boilerplate framework made by Tania Rascia. I felt like the purpose of this project was to demonstrate understanding of code in the browser overall, and this file provides sensible defaults and a simple grid.
+I used Primitive - a small CSS framework made by Tania Rascia. I felt like the purpose of this project was to demonstrate understanding of how code runs in the browser overall, and this file provides sensible defaults and a simple grid.
 
 ### Express
-I chose Express to handle building a simple static server. It serves up static files and can connect to a database. In development, the app loads a mock API from your local server.
+I chose Express to handle building a simple static server in Node. The server sends static files and allows the app to run on a specified port. It also has a route '/api' that returns a dummy JSON object to show how fetching data would work in development.
 
 ### Webpack & Babel
-Webpack and Babel make up this app's build process. Webpack bundles the JavaScript files and Babel transpiles ES6+ code across all browsers, with presets set to React.
+Webpack and Babel make up this app's build process. Webpack bundles the JavaScript files and Babel transpiles ES6+ code across all browsers, with presets set to the latest JavaScript and React.
 
 ## Deployment
 This app is deployed via Netlify at: https://cesium-app.netlify.app/
 
 ## Unit Testing
-For general purpose testing, this app provides Mocha (testing framework) and Chai (assertion library). For Express routes, supertest - an abstraction for testing HTTP requests). For React, it uses Enzyme - a browserless abstraction for testing React components.
+For general purpose testing, this app provides Mocha (testing framework) and Chai (assertion library). For Express routes, I provided supertest - an abstraction for testing HTTP requests. For React, it uses enzyme - a browserless abstraction for testing React components.
