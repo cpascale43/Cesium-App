@@ -12,8 +12,6 @@ const AddUserForm = (props) => {
   const handleInputChange = (event) => {
     const { name, value } = event.target;
 
-    console.log(event.target.value);
-
     setMaterial({ ...material, [name]: value });
   };
 
@@ -30,6 +28,7 @@ const AddUserForm = (props) => {
           return;
 
         props.addMaterial(material);
+        props.handleCost();
         setMaterial(initialFormState);
       }}
     >

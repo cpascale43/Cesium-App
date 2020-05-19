@@ -53,4 +53,4 @@ const createApp = () => {
   });
 };
 
-createApp()
+createApp();

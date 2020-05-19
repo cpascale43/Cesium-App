@@ -19,6 +19,7 @@ const EditMaterialForm = (props) => {
         event.preventDefault();
 
         props.updateMaterial(material.name, material);
+        props.handleCost();
       }}
     >
       <label>Name</label>
