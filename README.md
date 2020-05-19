@@ -7,7 +7,7 @@
 To run this on your own machine:
 
 - `npm install`
-- `npm start-dev`
+- `npm start`
 
 Optional Testing:
 
