@@ -28,7 +28,6 @@ const AddUserForm = (props) => {
           return;
 
         props.addMaterial(material);
-        props.handleCost();
         setMaterial(initialFormState);
       }}
     >
