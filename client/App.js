@@ -80,7 +80,6 @@ const App = () => {
               <h2>Edit material</h2>
               <EditMaterialForm
                 setEditing={setEditing}
-                handleCost={handleCost}
                 currentMaterial={currentMaterial}
                 updateMaterial={updateMaterial}
               />
@@ -89,7 +88,6 @@ const App = () => {
             <div>
               <h2>Add material</h2>
               <AddMaterialForm
-                handleCost={handleCost}
                 addMaterial={addMaterial}
               />
             </div>
