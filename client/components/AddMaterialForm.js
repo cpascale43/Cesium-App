@@ -31,34 +31,42 @@ const AddUserForm = (props) => {
         setMaterial(initialFormState);
       }}
     >
-      <label>Name</label>
-      <input
-        type="text"
-        name="name"
-        value={material.name}
-        onChange={handleInputChange}
-      />
-      <label>Type</label>
-      <input
-        type="text"
-        name="type"
-        value={material.type}
-        onChange={handleInputChange}
-      />
-      <label>Density</label>
-      <input
-        type="text"
-        name="density"
-        value={material.density}
-        onChange={handleInputChange}
-      />
-      <label>Cost Per Pound</label>
-      <input
-        type="text"
-        name="costPerPound"
-        value={material.costPerPound}
-        onChange={handleInputChange}
-      />
+      <label>
+        Name
+        <input
+          type="text"
+          name="name"
+          value={material.name}
+          onChange={handleInputChange}
+        />
+      </label>
+      <label>
+        Type
+        <input
+          type="text"
+          name="type"
+          value={material.type}
+          onChange={handleInputChange}
+        />
+      </label>
+      <label>
+        Density
+        <input
+          type="text"
+          name="density"
+          value={material.density}
+          onChange={handleInputChange}
+        />
+      </label>
+      <label>
+        Cost Per Pound
+        <input
+          type="text"
+          name="costPerPound"
+          value={material.costPerPound}
+          onChange={handleInputChange}
+        />
+      </label>
       <button>Add new material</button>
     </form>
   );
